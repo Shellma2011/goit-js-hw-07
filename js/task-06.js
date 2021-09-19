@@ -3,8 +3,8 @@ const inputLength = validationInput.dataset.length;
 
 const input = document.querySelector('input');
 
-validationInput.addEventListener('change', element => {
-    const text = element.target.value;
+validationInput.addEventListener('blur', element => {
+    const text = element.currentTarget.value;
     
     if (text.length == inputLength) {
         validationInput.classList.add('valid');
@@ -14,4 +14,6 @@ validationInput.addEventListener('change', element => {
     validationInput.classList.remove('valid');
 };
 })
+
+
 
